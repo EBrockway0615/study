@@ -1,0 +1,604 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+王传基
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+</style><title>Git学习记录</title>
+</head>
+<body class='typora-export os-windows typora-export-show-outline typora-export-no-collapse-outline'><div class='typora-export-content'>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#一git使用方法">一、Git使用方法</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1准备与本地库初始化">1.准备与本地库初始化</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1空间准备">1)空间准备</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2基础设置">2)基础设置</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3初始化本地库">3)初始化本地库</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2对本地库的操作">2.对本地库的操作</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1创建一个项目">1)创建一个项目</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2查看本地库状态">2)查看本地库状态</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3添加文件到暂存区">3)添加文件到暂存区</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4从暂存区删除文件">4)从暂存区删除文件</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5提交本地库">5)提交本地库</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#6修改文件">6)修改文件</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#7版本穿梭">7)版本穿梭</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3git-分支操作">3.git 分支操作</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1更换分支">1)更换分支</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-open"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2合并分支正常合并">2)合并分支(正常合并)</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-open"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3合并分支冲突合并">3)合并分支(冲突合并)</a></div><ul class="outline-children"></ul></li></ul></li></ul></li></div></div><div id='write'  class=''><p>&nbsp;</p><h1 id='一git使用方法'><span>一、Git使用方法</span></h1><h2 id='1准备与本地库初始化'><span>1.准备与本地库初始化</span></h2><h3 id='1空间准备'><span>1)空间准备</span></h3><p><span>新建文件夹，准备一个demo文件夹</span></p><p><img src="https://s2.loli.net/2022/03/04/MqnyCmBa6fjEbZt.png" referrerpolicy="no-referrer" alt="image-20220304210612646"></p><p>&nbsp;</p><h3 id='2基础设置'><span>2)基础设置</span></h3><p><span>需要进行用户设置，并不影响gitee，只是表明是哪个用户进行的操作</span></p><ul><li><span>基本代码</span></li></ul><p><img src="https://s2.loli.net/2022/03/04/Ctiu3QNJ5wnGcOs.png" referrerpolicy="no-referrer" alt="捕获"></p><p>&nbsp;</p><h3 id='3初始化本地库'><span>3)初始化本地库</span></h3><p>&nbsp;</p><p><span>在文件夹中右键</span></p><p><span>打开  Git Bash Here</span></p><ul><li><span>输入  </span><code>git init</code><span> --&gt;初始化本地库</span></li></ul><p><img src="https://s2.loli.net/2022/03/04/GC52ziZYUWmS6Kh.png" referrerpolicy="no-referrer" alt="image-20220304173407406"></p><p><span>此时产生一个.git 的文件夹</span></p><p><img src="https://s2.loli.net/2022/03/04/9T1zZCgLkn2UOrf.png" referrerpolicy="no-referrer" alt="image-20220304173443271"></p><p><span>文件夹中的文件不能轻易改变</span></p><p><strong><img src="https://s2.loli.net/2022/03/04/2aB6u8wfeONRGkC.png" referrerpolicy="no-referrer" alt="image-20220304173509791"></strong></p><ul><li><span>使用 “ll” 可以查看目录</span></li><li><span>使用&quot;ll -a&quot; 可以查看隐藏目录</span></li></ul><p><img src="https://s2.loli.net/2022/03/04/mMa1ry9SEJtW76P.png" referrerpolicy="no-referrer" alt="image-20220304173622320"></p><ul><li><span>使用&quot;cd 文件名&quot;可以打开文件夹</span></li><li><span>使用 &quot;cd ..&quot;返回上一级文件夹</span></li></ul><p>&nbsp;</p><ul><li><code>git status</code><span> --&gt; 查看本地库状态</span></li></ul><p><img src="https://s2.loli.net/2022/03/04/U98zTZ5KGPJfvFM.png" referrerpolicy="no-referrer" alt="image-20220304172234267"></p><p><span>on branch status --&gt;  指的是所在分支，分支为 master</span></p><p><span>No commits yet --&gt; 当前未提交过</span></p><p><span>nothing to commit (create/copy files and use &quot;git add&quot; to track) --&gt; 未创建任何文件</span></p><h2 id='2对本地库的操作'><span>2.对本地库的操作</span></h2><h3 id='1创建一个项目'><span>1)创建一个项目</span></h3><p><span>vim 文件名.后缀 --&gt; 创建一个项目</span></p><ul><li><span>例：</span><code>vim hello.txt</code><span>  --&gt; 创建一个名称为hello的文本文档</span></li></ul><p><img src="https://s2.loli.net/2022/03/04/cZQrngfMHJibDtz.png" alt="image-20220304174043642" style="zoom:67%;" /></p><p><span>在vim中，先使用Esc退出编辑状态</span></p><ul><li><span>“yy”是复制；”p“是粘贴</span></li><li><span>使用 “：wq”  --&gt;  退出保存编辑</span></li></ul><p><img src="https://s2.loli.net/2022/03/04/EJmInuTYF2s7Ktq.png" referrerpolicy="no-referrer" alt="image-20220304174543383"></p><p>&nbsp;</p><p><span>使用代码检查最后一行的内容</span></p><p><img src="https://s2.loli.net/2022/03/04/yISe1QvrMkcP3ix.png" referrerpolicy="no-referrer" alt="image-20220304174728054"></p><h3 id='2查看本地库状态'><span>2)查看本地库状态</span></h3><p><span>此时再次检查本地库状态</span></p><p><img src="https://s2.loli.net/2022/03/04/efNZV3mUWI5DPLs.png" referrerpolicy="no-referrer" alt="image-20220304174842574"></p><p><span>On branch master --&gt; 当前所处分支，仍为master</span></p><p><span>No commits yet --&gt; 当前未提交过</span></p><p><span>Untracked files: --&gt;   未被追踪的文件</span>
+<span>  (use &quot;git add </span><file><span>...&quot; to include in what will be committed)</span>
+<span>        </span><strong><span>hello.txt</span></strong><span> --&gt;为红色，表示文件虽然存在，但是处于工作区，并未被追踪过</span></p><p><span>nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span></p><p><u><span>没有添加任何东西，但是已经存在一个未被追踪的文件，可以使用 git add 去追踪</span></u>🖊</p><p>&nbsp;</p><h3 id='3添加文件到暂存区'><span>3)添加文件到暂存区</span></h3><ul><li><code>git add 项目名称.后缀</code><span>  --&gt; 添加项目到暂存区</span></li></ul><p><img src="https://s2.loli.net/2022/03/04/zGonbUYs8acyPBr.png" referrerpolicy="no-referrer" alt="image-20220304180227105"></p><p><span>warning: LF will be replaced by CRLF in hello.txt.</span></p><p><u><span>git默认帮助转换了“LF”和“CRLF”两种换行符</span></u>🖊</p><p><span>The file will have its original line endings in your working directory</span></p><p><u><span>该文件的原始行尾将位于工作目录中</span></u>🖊</p><p>&nbsp;</p><p><span>再次检查本地库状态</span></p><p><img src="https://s2.loli.net/2022/03/04/y8TVPAEunGq5oXR.png" referrerpolicy="no-referrer" alt="image-20220304180709638"></p><p><span>On branch master --&gt; 当前所处分支，仍为master</span></p><p><span>No commits yet --&gt; 当前未提交过</span></p><p><span>Changes to be committed:</span></p><ul><li><span>(use &quot;git rm --cached </span><file><span>...&quot; to unstage) --&gt; 使用此代码进行删除</span>
+<span>    </span><strong><span>new file:   hello.txt </span></strong><span>--&gt;为绿色，此文件已被追踪</span></li></ul><p><em><strong><span>ps: 此时文件只是存在于暂存区中</span></strong></em></p><p><u><span>暂存区中的文件可以被删除</span></u>🖊</p><p>&nbsp;</p><h3 id='4从暂存区删除文件'><span>4)从暂存区删除文件</span></h3><ul><li><span>使用代码  </span><code>git rm --cached &lt;file&gt;</code><span> 进行删除</span></li></ul><p><img src="https://s2.loli.net/2022/03/04/IPC9ZV235mQRMv4.png" referrerpolicy="no-referrer" alt="image-20220304181504332"></p><p><u><span>此时删除仅为删除暂存区中的文件，工作区仍存在此文件</span></u>🖊</p><p>&nbsp;</p><ul><li><code>使用“ll”进行验证</code></li></ul><p><img src="https://s2.loli.net/2022/03/04/Ra9In17QjBCve8E.png" referrerpolicy="no-referrer" alt="image-20220304181742528"></p><p><u><span>发现工作区中仍然存在hello.txt文件</span></u>🖊</p><p>&nbsp;</p><ul><li><code>再次使用 git status 进行查看</code></li></ul><p><img src="https://s2.loli.net/2022/03/04/kxEBsfDIiY6QGW2.png" referrerpolicy="no-referrer" alt="image-20220304182008180"></p><p><u><span>缓存区中的hello.txt文件被删除，需要重新追踪</span></u>🖊</p><p>&nbsp;</p><h3 id='5提交本地库'><span>5)提交本地库</span></h3><p><span>基本语法：</span></p><ul><li><code>git commit -m &quot;日志信息&quot; 文件名</code></li></ul><p><img src="https://s2.loli.net/2022/03/04/rhAVNn8zJKCqIeZ.png" referrerpolicy="no-referrer" alt="image-20220304183220780"></p><ul><li><code>git commit -m &quot;first commit&quot; hello.txt</code></li></ul><p><span>warning: LF will be replaced by CRLF in hello.txt.</span></p><p><u><span>git默认帮助转换了“LF”和“CRLF”两种换行符[master (root-commit) eaf55cb] hello.txt</span></u>🖊</p><p><span>The file will hace its original line endings in your working directory</span></p><p><span>[master (root-commit) 965c6a1] first commit       </span><strong><span>965c6a1</span></strong><span> --&gt; 7位字符码（版本号）</span></p><p><u><span>在master分支上有一个文件被提交</span></u>🖊</p><p><span> 1 file changed, 16 insertions(+)</span></p><p><u><span>1个文件被改变，16行代码被插入</span></u>🖊</p><p><span> create mode 100644 hello.txt</span></p><p>&nbsp;</p><p><span>再次查看本地库</span></p><p><img src="https://s2.loli.net/2022/03/04/pvxlTXbcUFCtQRn.png" referrerpolicy="no-referrer" alt="image-20220304183854744"></p><p><span>On branch master  --&gt; 在分支master上</span>
+<span>nothing to commit, working tree clean</span></p><p><u><span>已经提交过了，并且在提交之后没有更改过，树是干净的</span></u>🖊</p><p>&nbsp;</p><p><span>查看版本信息</span></p><ul><li><code>git reflog</code></li></ul><p><img src="https://s2.loli.net/2022/03/04/3kwrV52XIcQieBd.png" referrerpolicy="no-referrer" alt="image-20220304184053747"></p><p><span>eaf55cb (HEAD -&gt; master) HEAD@{0}: commit (initial): hello.txt</span></p><p><span> </span><strong><span>(HEAD -&gt; master)</span></strong><span> --&gt; 指针是指向master的</span></p><p>&nbsp;</p><ul><li><code>git log</code><span> --&gt; 查看详细日志</span></li></ul><p><img src="https://s2.loli.net/2022/03/04/8WCJRg9Zp34hFHS.png" referrerpolicy="no-referrer" alt="image-20220304184246893"></p><p><u><span>可以看到是谁提交的版本以及提交版本的具体时间</span></u>🖊</p><p><span>eaf55cbecfd88ce64140d09209083884756cd511  --&gt; 完整版的版本号</span></p><h3 id='6修改文件'><span>6)修改文件</span></h3><ul><li><span>利用 </span><code>&quot;cat 文件名&quot;</code><span>查看文件内容</span></li></ul><p><img src="https://s2.loli.net/2022/03/04/Jt4Awg9Hcpfyx1i.png" referrerpolicy="no-referrer" alt="image-20220304205307190"></p><p>&nbsp;</p><ul><li><span>利用“</span><code>vim 文件名</code><span>”进入文件详情</span></li></ul><p><img src="https://s2.loli.net/2022/03/04/SmqkQgcNn4r28VB.png" referrerpolicy="no-referrer"></p><p><u><span>此时可以进行代码修改</span></u>🖊</p><p>&nbsp;</p><p><span>此时再次查看本地库状态</span></p><p><img src="https://s2.loli.net/2022/03/04/3VLbUAdYnBgXO8c.png" referrerpolicy="no-referrer" alt="image-20220304205529997"></p><p><span> modified:   hello.txt --&gt;提示代码已经被修改，并且红色意味着文件还未被添加到暂存区</span></p><p>&nbsp;</p><p><span>此时需要对文件进行追踪</span></p><ul><li><span>利用代码 </span><code>&quot;git add 文件名&quot;</code><span> 进行追踪</span></li></ul><p><img src="https://s2.loli.net/2022/03/04/UZo9AljeR4SbQvi.png" referrerpolicy="no-referrer" alt="image-20220304205717275"></p><p>&nbsp;</p><p><span>再次进行本地库查询</span></p><p><img src="https://s2.loli.net/2022/03/04/LbQEDMKmj5YWoiH.png" referrerpolicy="no-referrer" alt="image-20220304205824838"></p><p><u><span>此时文件已经被添加到暂存区中</span></u>🖊</p><p>&nbsp;</p><p><span>这时进行提交处理</span></p><ul><li><code>git commit -m &quot;second commit&quot; hello.txt</code></li></ul><p><img src="https://s2.loli.net/2022/03/04/WMESthmqZuNdkvR.png" referrerpolicy="no-referrer" alt="image-20220304205947980"></p><p><span>1 file changed, 1 insertion(+), 1 deletion(-)</span></p><p><u><span>1个文件被修改，1行新增，1行删除（先删除被修改行，再进行添加新的一行）</span></u>🖊</p><p>&nbsp;</p><p><span>此时进行版本查询</span></p><ul><li><code>git reflog</code></li></ul><p><img src="https://s2.loli.net/2022/03/04/8JQuPeGf59AbpqM.png" referrerpolicy="no-referrer" alt="image-20220304210339998"></p><p><u><span>已经有一个新的版本生成</span></u>🖊</p><p><span>6a2b19b (HEAD -&gt; master)</span></p><p><u><span>指针指向第二个版本，并且生成一个新的版本号</span></u>🖊</p><p>&nbsp;</p><p><span>以此类推进行第三次版本提交</span></p><p><img src="https://s2.loli.net/2022/03/04/jPN9RFpVecIMDYy.png" referrerpolicy="no-referrer" alt="image-20220304211212745"></p><p><span>可以发现第三个版本也已经成功提交，并且生成了一个新的版本号</span></p><p><u><span>指针总会指向最新的版本</span></u>🖊</p><p>&nbsp;</p><p><span>进行详细版本号查询</span></p><p><img src="https://s2.loli.net/2022/03/04/UspBNx7QneZJtyR.png" referrerpolicy="no-referrer" alt="image-20220304211549763"></p><p><u><span>可以看到每一个版本的提交时间和是哪个用户提交的</span></u>🖊</p><p>&nbsp;</p><p><span>此时查看文件，只会看到最后一次修改的文件</span></p><p><img src="https://s2.loli.net/2022/03/04/idKZ241a67epLFN.png" referrerpolicy="no-referrer" alt="image-20220304211659662"></p><p>&nbsp;</p><p><span>在工作区中只会有一个文件，不会产生副本</span></p><p><img src="https://s2.loli.net/2022/03/04/rQWuInaD2tOZgG4.png" referrerpolicy="no-referrer" alt="image-20220304211429858"></p><p>&nbsp;</p><h3 id='7版本穿梭'><span>7)版本穿梭</span></h3><p>&nbsp;</p><p><span>更改指针指向</span></p><ul><li><code>git reset --hard 版本号</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/8Cn9XuZbr1AN4Ed.png" referrerpolicy="no-referrer" alt="image-20220305172354222"></p><p>&nbsp;</p><p><span>查看版本日志</span></p><p><img src="https://s2.loli.net/2022/03/05/g5fq39vYrjXSPyU.png" referrerpolicy="no-referrer" alt="image-20220305172431089"></p><p><u><span>会提示指针已经指向所更改的版本号</span></u>🖊</p><p>&nbsp;</p><p><span>进入文件查看</span></p><ul><li><code>cat 文件名</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/vTpDjK4XrmtsFG9.png" referrerpolicy="no-referrer" alt="image-20220305172707785"><span>fax</span></p><p><u><span>发现文件版本为刚才更改的版本</span></u>🖊</p><p>&nbsp;</p><p><span>进入本地文件查看</span></p><p><img src="https://s2.loli.net/2022/03/05/m3v4fRAQILd12st.png" referrerpolicy="no-referrer" alt="image-20220305172934753"></p><p>&nbsp;</p><p><span>git文件夹中，打开head文件</span></p><p><img src="https://s2.loli.net/2022/03/05/Xcf4GInvMPeCROr.png" referrerpolicy="no-referrer"></p><p>&nbsp;</p><p><span>文件中ref: refs/heads/master     master即为当前所在分支</span></p><p><img src="https://s2.loli.net/2022/03/05/VUSioJEcaYqw3dX.png" referrerpolicy="no-referrer" alt="image-20220305173038262"></p><p>&nbsp;</p><p><span>进入文件夹   refs--&gt;heads--&gt;所在分支</span></p><p><img src="https://s2.loli.net/2022/03/05/mHnD87k2WLABXNg.png" referrerpolicy="no-referrer" alt="image-20220305173154238"></p><p>&nbsp;</p><p><span>会发现其中的版本号就是当前指针所指向的版本</span></p><p><img src="https://s2.loli.net/2022/03/05/NqmVgj3KEtGIDRb.png" referrerpolicy="no-referrer" alt="image-20220305173239869"></p><p>&nbsp;</p><p><span>再次更改版本为版本1</span></p><p><img src="https://s2.loli.net/2022/03/05/8345PaKkYZ7soUz.png" referrerpolicy="no-referrer" alt="image-20220305173352608"></p><p><span>此时文件中的版本号也会随之改变</span><img src="https://s2.loli.net/2022/03/05/tXCAj2yZF8bPRGB.png" referrerpolicy="no-referrer" alt="image-20220305173443751"></p><p><u><span>更改版本是从内存中调用不同的版本号进行版本更换，而不是不断复制粘贴新的文件</span></u>🖊</p><p>&nbsp;</p><h2 id='3git-分支操作'><span>3.git 分支操作</span></h2><p><span>服务器运行模式</span></p><p><img src="https://s2.loli.net/2022/03/05/zO7RCwMvJy9ZQSP.png" referrerpolicy="no-referrer" alt="image-20220305173824711"></p><p><span>&lt;&lt;&lt;---------------------------------------------------------------------------------------------------------------------------------------</span></p><p><span>        在版本控制过程中，同时推进多个任务，为每个任务，我们可以创建每个人物的单独的分支。使用分支意味着程序员可以把自己的工作从开发主线上分离开来，开发自己分支的时候，不会影响主线分支的运行。对于初学者而言，分支可以简单理解为副本，一个分支就是一个单独的副本。（分支底层其实也是指针的引用）</span></p><p><img src="https://s2.loli.net/2022/03/05/l5uekGVnqasNbw9.png" referrerpolicy="no-referrer" alt="image-20220305174713753"></p><p><span>分支的好处</span></p><p><span>同时并行推进多个功能开发，提高开发效率</span></p><p><span>各个分支在开发的过程中，如果某一个分支开发失败，不会对其他分支有任何影响。失败的分支删除重新开始即可。</span></p><p>&nbsp;</p><p><span>分支操作基本代码</span></p><p><img src="https://s2.loli.net/2022/03/05/Ne3tumdvVsTxyLi.png" referrerpolicy="no-referrer" alt="image-20220305175516253"></p><ul><li><code>git branch -v</code><span>查看当前所有分支</span></li></ul><p><img src="https://s2.loli.net/2022/03/05/WcdKtp7jenYIVD6.png" referrerpolicy="no-referrer" alt="image-20220305175657181"></p><p>&nbsp;</p><ul><li><code>git branch hot-fix</code><span> 创建一个名称为hot-fix的新分支</span></li></ul><p><img src="https://s2.loli.net/2022/03/05/tOHZBrAXvfGq7uF.png" referrerpolicy="no-referrer" alt="image-20220305175811654"></p><p>&nbsp;</p><p><span>查看分支</span></p><p><img src="https://s2.loli.net/2022/03/05/qem1tSRT4gHoB6J.png" referrerpolicy="no-referrer" alt="image-20220305175913859"></p><h3 id='1更换分支'><span>1)更换分支</span></h3><ul><li><code>git checkout hot-fix</code><span>更换分支</span></li></ul><p><img src="https://s2.loli.net/2022/03/05/7U8K9jTHxGCOQi5.png" referrerpolicy="no-referrer" alt="image-20220305180131082"></p><p><u><span>当前所处分支已经更换为hot-fix</span></u>🖊</p><p>&nbsp;</p><p><span>在分支hot_fix上进行文件修改</span></p><ul><li><code>vim hello.txt</code><span>  打开文件</span></li></ul><p><img src="https://s2.loli.net/2022/03/05/1qexacW7hXKuSzZ.png" referrerpolicy="no-referrer" alt="image-20220305180408627"></p><p><img src="https://s2.loli.net/2022/03/05/OoDESiVY93WfQ8l.png" referrerpolicy="no-referrer" alt="image-20220305180426241"></p><p>&nbsp;</p><p><span>此时查看本地库状态</span></p><ul><li><code>git status</code></li></ul><p><strong><img src="https://s2.loli.net/2022/03/05/REH58aAWJefc9hx.png" referrerpolicy="no-referrer" alt="image-20220305180502400"></strong></p><p><u><span>会提示在hot-fix分支上有一个新的未被追踪的文件</span></u>🖊</p><p>&nbsp;</p><p><span>此时将文件添加到暂存区</span></p><ul><li><code>git add hello.txt</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/u7N1IqGdUg5nESY.png" referrerpolicy="no-referrer" alt="image-20220305180729166"></p><p>&nbsp;</p><p><span>对文件进行本地库提交</span></p><ul><li><code>git commit -m &quot;hot-fix first commit&quot; hello.txt</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/yMejIKubiJ7N52l.png" referrerpolicy="no-referrer" alt="image-20220305180836457"></p><p><span>此时查看文件，发现文件已经被修改</span></p><ul><li><code>cat hello.txt</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/ZESrf71KAlqpCcg.png" referrerpolicy="no-referrer" alt="image-20220305180957071"></p><p>&nbsp;</p><p><span>进行版本查看，发现指针已经更改指向</span></p><ul><li><code>git reflog</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/8qCDuRxXsTgf4kO.png" referrerpolicy="no-referrer" alt="image-20220305181147304"></p><p><u><span>指针指向了hot-fix分支中的新提交的文件</span></u>🖊</p><p>&nbsp;</p><h3 id='2合并分支正常合并'><span>2)合并分支(正常合并)</span></h3><p><span>进入master分支</span></p><ul><li><code>git checkout master</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/yeaWXrLkuJg4xYN.png" referrerpolicy="no-referrer" alt="image-20220305205706328"></p><p>&nbsp;</p><p><span>查看分支下的文件</span></p><ul><li><code>cat hello.txt</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/BktfLamVcXKUiNR.png" referrerpolicy="no-referrer" alt="image-20220305205747047"></p><p><u><span>文件并未像ho、t-fix中一样被修改</span></u>🖊</p><p>&nbsp;</p><p><span>合并两个分支</span></p><ul><li><code>git merge hot-fix</code><span>      合并hot-fix分支到当前分支上</span></li></ul><p><img src="https://s2.loli.net/2022/03/05/gnbZyXPsVO3IYDc.png" referrerpolicy="no-referrer" alt="image-20220305210101598"></p><p>&nbsp;</p><p><span>此时查看文件</span></p><ul><li><code>cat hello.txt</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/va3YRSDfkj9B1p5.png" referrerpolicy="no-referrer" alt="image-20220305210214571"><span>  </span></p><p><u><span>发现文件变成已经被修改过的文件了</span></u>🖊</p><p>&nbsp;</p><h3 id='3合并分支冲突合并'><span>3)合并分支(冲突合并)</span></h3><p><span>产生冲突的原因：</span></p><p><span>        合并分支时，两个分支在</span><u><strong><span>同一个文件的同一个位置</span></strong></u><span>有两套完全不同的修改。Git无法替代我们决定使用哪一个。必须</span><u><strong><span>人为决定</span></strong></u><span>新代码内容。</span></p><p>&nbsp;</p><p><span>此时进入文件进行修改</span></p><ul><li><code>vim hello.txt</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/AYkJR1L2EqFxwmo.png" referrerpolicy="no-referrer" alt="image-20220305211213676"></p><p><img src="https://s2.loli.net/2022/03/05/98wW7xegNjilXYb.png" referrerpolicy="no-referrer" alt="image-20220305211059962"></p><p>&nbsp;</p><p><span>追踪并上传</span></p><ul><li><code>git add hello.txt</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/34UwFByAQbZqt2V.png" referrerpolicy="no-referrer" alt="image-20220305211230853"></p><p>&nbsp;</p><ul><li><code>git commit -m &quot;master test&quot; hello.txt</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/2Bte6YENnSirkUf.png" referrerpolicy="no-referrer" alt="image-20220305211236762"></p><p>&nbsp;</p><p><span>检查文件是否被修改</span></p><ul><li><code>cat hello.txt</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/InY3z4mi6rPc8KL.png" referrerpolicy="no-referrer" alt="image-20220305211323640"></p><p>&nbsp;</p><p><span>此时切换分支进行下一步修改</span></p><ul><li><code>git checkout hot-fix</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/S5nLTRzDixqIvaW.png" referrerpolicy="no-referrer" alt="image-20220305211418643"></p><p>&nbsp;</p><p><span>进入文件进行修改</span></p><ul><li><code>vim hello.txt</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/fgn2oURLOs7zGrW.png" referrerpolicy="no-referrer" alt="image-20220305211707862"></p><p><img src="https://s2.loli.net/2022/03/05/MzL86HrwsniOmgc.png" referrerpolicy="no-referrer" alt="image-20220305211655398"></p><p>&nbsp;</p><p><span>修改之后进行追踪和上传</span></p><ul><li><code>git add hello.txt</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/OheIL6QflaxADX7.png" referrerpolicy="no-referrer" alt="image-20220305211846324"></p><p>&nbsp;</p><ul><li><code>git commit -m &quot;hot-fix test&quot; hello.txt</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/hvVNdAPcpelqfzJ.png" referrerpolicy="no-referrer" alt="image-20220305211910202"></p><p>&nbsp;</p><p><span>切换到master分支</span></p><ul><li><span>git checkout master</span></li></ul><p><img src="https://s2.loli.net/2022/03/05/iDVaNOUbzE2suCM.png" referrerpolicy="no-referrer" alt="image-20220305212047403"></p><p>&nbsp;</p><p><span>执行和并指令</span></p><ul><li><code>git merge hot-fix</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/HNLT1nwIZBig3X5.png" referrerpolicy="no-referrer" alt="image-20220305212400754"></p><p><u><span>提示自动合并失败，存在冲突</span></u>🖊</p><p>&nbsp;</p><p><span>且状态发生改变</span></p><p><img src="https://s2.loli.net/2022/03/05/NPyn5DtSHjIB7g2.png" referrerpolicy="no-referrer" alt="image-20220305212529854"></p><p>&nbsp;</p><p><span>查看本地库状态</span></p><ul><li><code>git status</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/lfgNXpTzI9Jd6sk.png" referrerpolicy="no-referrer" alt="image-20220305212609203"></p><p><u><span>会提示有一个项目没有合并成功</span></u>🖊</p><p>&nbsp;</p><p><span>此时打开文件</span></p><ul><li><code>vim hello.txt</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/NLo8zPUjHflWDRE.png" referrerpolicy="no-referrer" alt="image-20220305212755733"></p><p>&nbsp;</p><p>&nbsp;</p><p><img src="https://s2.loli.net/2022/03/05/knavg3I1QctdwO7.png" referrerpolicy="no-referrer" alt="image-20220305213037178"></p><p><u><span>指的是当前分支中的代码</span></u>🖊</p><p>&nbsp;</p><p><img src="https://s2.loli.net/2022/03/05/q8fka16Q2IyoR9z.png" referrerpolicy="no-referrer" alt="image-20220305212953590"></p><p><u><span>指的是冲突分支中需要合并的代码</span></u>🖊</p><p>&nbsp;</p><p><span>此时删除不需要的代码以及特殊符号，留下需要合并的代码</span></p><p><img src="https://s2.loli.net/2022/03/05/GRctlZzWpVPI7T2.png" referrerpolicy="no-referrer" alt="image-20220305213318149"></p><p><u><span>保证代码行数与之前一致，且无特殊符号</span></u>🖊</p><p>&nbsp;</p><p><span>修改完毕之后输入   Esc --&gt; :wq   保存退出</span></p><p>&nbsp;</p><p><span>并且需要重新追踪上传</span></p><p><img src="https://s2.loli.net/2022/03/05/YQlyDacVzK3UwE6.png" referrerpolicy="no-referrer" alt="image-20220305213646796"></p><p>&nbsp;</p><p><span>但是上传时不能添加文件名，因为两个分支中都存在相同文件</span></p><p><img src="https://s2.loli.net/2022/03/05/gcfRzQZIOSnMlob.png" referrerpolicy="no-referrer" alt="image-20220305213723382"></p><p><u><span>如果添加文件名的话，会提示找不到文件</span></u>🖊</p><p>&nbsp;</p><p><span>进行正确操作</span></p><ul><li><code>git commit -m &quot;merge test&quot;</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/FcXSxwtl7dymJLg.png" referrerpolicy="no-referrer" alt="image-20220305213834109"></p><p><u><span>此时文件成功合并且MERGING 提示也已经消失</span></u>🖊</p><p>&nbsp;</p><p><span>此时查看文件</span></p><ul><li><code>cat hello.txt</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/1RD7GBtNeuTm2aH.png" referrerpolicy="no-referrer" alt="image-20220305214030512"></p><p><u><span>此时两行修改已经成功合并</span></u>🖊</p><p><u><span>但此时修改的仅为master分支中的内容</span></u>🖊</p><p>&nbsp;</p><p><span>切换到hot-fix 分支，查看文件内容</span></p><ul><li><code>git checkout hot-fix</code></li></ul><ul><li><code>cat hello.txt</code></li></ul><p><img src="https://s2.loli.net/2022/03/05/4yquDnEXBYAzSLK.png" referrerpolicy="no-referrer" alt="image-20220305214230137"></p><p><u><span>发现文件并没有被修改</span></u>🖊</p><p><u><span>说明合并分支只会合并所在分支，被合并分支并不会被合并</span></u>🖊</p><p><u><span>git合并分支依旧使用的是指针逻辑</span></u>🖊</p><p><img src="https://s2.loli.net/2022/03/05/YO8f6MDIinhQzyw.png" referrerpolicy="no-referrer" alt="image-20220305214754787"></p><p>&nbsp;</p></div></div>
+
+<script>(function(){var e=document.body.parentElement,t=[],n=null,i=document.body.classList.contains("typora-export-collapse-outline"),r=function(e,t,n){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var i=e.target;i&&i!=this;i=i.parentNode)if(i.matches(t)){!1===n.call(i,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)};function o(){return e.scrollTop}r("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),d(),!1}),r("click",".outline-item",function(e){var t=this.querySelector(".outline-label");if(location.hash="#"+t.getAttribute("href"),i){var n=this.closest(".outline-item-wrapper").classList;n.contains("outline-item-open")||n.add("outline-item-open"),c(),n.add("outline-item-active")}});var a,s,l=function(){var e=o();n=null;for(var i=0;i<t.length&&t[i][1]-e<60;i++)n=t[i]},c=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},d=function(){if(n){c();var e=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(n[0]):n[0])+'"]');if(e)if(i){var t=e.closest(".outline-item-open>ul>.outline-item-wrapper");if(t)t.classList.add("outline-item-active");else{for(var r=(e=e.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");r;)r=(e=r).parentElement.closest(".outline-item-wrapper");e.classList.add("outline-item-active")}}else e.closest(".outline-item-wrapper").classList.add("outline-item-active")}};window.addEventListener("scroll",function(e){a&&clearTimeout(a),a=setTimeout(function(){l(),d()},300)});var u=function(){s=setTimeout(function(){!function(){t=[];var e=o();document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(n=>{var i=n.getAttribute("id");t.push([i,e+n.getBoundingClientRect().y])})}(),l(),d()},300)};window.addEventListener("resize",function(e){s&&clearTimeout(s),u()}),u()})();</script></body>
+</html>
